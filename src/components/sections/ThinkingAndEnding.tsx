@@ -350,6 +350,28 @@ export const HumanEnding = () => {
                         >
                             View GitHub
                         </a>
+                        <a
+                            href="https://x.com/ArindamTripat11"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[10px] uppercase tracking-[0.4em] text-text-tertiary hover:text-accent transition-colors border-b border-transparent hover:border-accent pb-1"
+                        >
+                            X (Twitter)
+                        </a>
+                        <a
+                            href="https://www.instagram.com/_arindxm/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[10px] uppercase tracking-[0.4em] text-text-tertiary hover:text-accent transition-colors border-b border-transparent hover:border-accent pb-1"
+                        >
+                            Instagram
+                        </a>
+                        <a
+                            href="mailto:devcrewx@gmail.com"
+                            className="text-[10px] uppercase tracking-[0.4em] text-text-tertiary hover:text-accent transition-colors border-b border-transparent hover:border-accent pb-1"
+                        >
+                            Email
+                        </a>
                     </div>
                 </RevealOnScroll>
             </div>
