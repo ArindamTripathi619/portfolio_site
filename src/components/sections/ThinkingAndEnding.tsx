@@ -367,6 +367,12 @@ export const HumanEnding = () => {
                             Instagram
                         </a>
                         <a
+                            href="/resume"
+                            className="text-[10px] uppercase tracking-[0.4em] text-text-tertiary hover:text-accent transition-colors border-b border-transparent hover:border-accent pb-1"
+                        >
+                            View Resume
+                        </a>
+                        <a
                             href="mailto:devcrewx@gmail.com"
                             className="text-[10px] uppercase tracking-[0.4em] text-text-tertiary hover:text-accent transition-colors border-b border-transparent hover:border-accent pb-1"
                         >
