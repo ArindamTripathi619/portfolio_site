@@ -1,7 +1,6 @@
 "use client";
 
-import { Mail, MapPin, Globe, Github, Linkedin, Award, BookOpen, Code2, Briefcase, FileText, Zap, Terminal, ArrowLeft } from 'lucide-react';
-import Link from 'next/link';
+import { Mail, MapPin, Globe, Github, Linkedin, Award, BookOpen, Code2, Briefcase, FileText, Zap, Terminal } from 'lucide-react';
 
 const Resume = () => {
     const details = {
@@ -111,45 +110,36 @@ const Resume = () => {
     };
 
     return (
-        <div className="min-h-screen w-full bg-ink-black py-10 px-4 sm:px-6 lg:px-8 font-inter print:bg-white print:py-0 print:px-0 scroll-smooth flex flex-col items-center relative transition-colors duration-500">
-            {/* Exit Button */}
-            <Link
-                href="/"
-                className="fixed top-8 right-8 z-50 bg-accent text-ink-black p-3 px-6 rounded-full shadow-2xl hover:scale-105 hover:bg-white transition-all active:scale-95 group print:hidden flex items-center gap-2 font-bold text-xs uppercase tracking-widest"
-            >
-                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                <span>Exit Resume</span>
-            </Link>
-
-            <div className="w-full max-w-4xl bg-white shadow-[0_20px_50px_rgba(0,0,0,0.3)] rounded-2xl overflow-hidden print:shadow-none print:rounded-none resume-reset">
+        <div className="min-h-screen bg-slate-50 py-10 px-4 sm:px-6 lg:px-8 font-inter print:bg-white print:py-0 print:px-0">
+            <div className="max-w-4xl mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden print:shadow-none print:rounded-none">
 
                 {/* Header Section */}
-                <header className="bg-slate-900 text-white p-8 sm:p-12 relative overflow-hidden">
-                    <div className="relative z-10 flex flex-col md:flex-row items-center sm:items-start md:items-center justify-between gap-8">
+                <header className="bg-slate-900 text-white p-8 sm:p-12 relative overflow-hidden print:p-4 print:pb-2">
+                    <div className="relative z-10 flex flex-col md:flex-row items-center sm:items-start md:items-center justify-between gap-8 print:gap-2">
                         <div className="text-center sm:text-left">
-                            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-2 uppercase text-white no-reset">{details.name}</h1>
-                            <p className="text-slate-400 text-xl font-medium tracking-wide mb-6 italic no-reset">Software Engineer & Systems Researcher</p>
+                            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-2 uppercase print:text-2xl print:mb-0.5">{details.name}</h1>
+                            <p className="text-slate-400 text-xl font-medium tracking-wide mb-6 print:text-xs print:mb-2 italic">Software Engineer & Systems Researcher</p>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm max-w-2xl no-reset">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm max-w-2xl print:text-[9px] print:gap-1 print:grid-cols-2">
                                 <div className="flex items-center gap-2 justify-center sm:justify-start">
                                     <Mail className="w-4 h-4 text-blue-400" />
-                                    <a href={`mailto:${details.email}`} className="hover:text-blue-400 transition-colors text-slate-300">{details.email}</a>
+                                    <a href={`mailto:${details.email}`} className="hover:text-blue-400 transition-colors">{details.email}</a>
                                 </div>
                                 <div className="flex items-center gap-2 justify-center sm:justify-start">
                                     <Globe className="w-4 h-4 text-blue-400" />
-                                    <a href={`https://${details.portfolio}`} className="hover:text-blue-400 transition-colors uppercase font-bold tracking-wider text-slate-300">{details.portfolio}</a>
+                                    <a href={`https://${details.portfolio}`} className="hover:text-blue-400 transition-colors uppercase font-bold tracking-wider">{details.portfolio}</a>
                                 </div>
                                 <div className="flex items-center gap-2 justify-center sm:justify-start">
                                     <MapPin className="w-4 h-4 text-blue-400" />
-                                    <span className="text-slate-300">{details.address}</span>
+                                    <span>{details.address}</span>
                                 </div>
                                 <div className="flex items-center gap-2 justify-center sm:justify-start">
                                     <Terminal className="w-4 h-4 text-blue-400" />
                                     <div className="flex gap-4">
-                                        <a href="https://github.com/ArindamTripathi619" className="hover:text-blue-400 transition-colors flex items-center gap-1 text-slate-300">
+                                        <a href="https://github.com/ArindamTripathi619" className="hover:text-blue-400 transition-colors flex items-center gap-1">
                                             <Github className="w-3.5 h-3.5" /> GitHub
                                         </a>
-                                        <a href="https://linkedin.com/in/arindam-tripathi-962551349/" className="hover:text-blue-400 transition-colors flex items-center gap-1 text-slate-300">
+                                        <a href="https://linkedin.com/in/arindam-tripathi-962551349/" className="hover:text-blue-400 transition-colors flex items-center gap-1">
                                             <Linkedin className="w-3.5 h-3.5" /> LinkedIn
                                         </a>
                                     </div>
@@ -159,47 +149,46 @@ const Resume = () => {
 
                         {/* Profile Image */}
                         <div className="flex-shrink-0 relative group">
-                            <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden border-2 border-slate-700/50 shadow-2xl relative z-10">
+                            <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden border-2 border-slate-700/50 shadow-2xl relative z-10 print:shadow-none print:border-slate-800 print:w-20 print:h-20">
                                 <img
                                     src="/assets/images/my_image.webp"
                                     alt={details.name}
-                                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 print:grayscale-0 transition-all duration-700"
                                     style={{ objectPosition: '50% 20%' }}
                                 />
                             </div>
                             <div className="absolute -inset-2 bg-blue-500/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 print:hidden"></div>
                         </div>
                     </div>
-                    {/* Decorative elements */}
                     <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 opacity-10 rounded-full -mr-24 -mt-24 blur-3xl"></div>
                     <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-400 opacity-5 rounded-full -ml-16 -mb-16 blur-2xl"></div>
                 </header>
 
-                <div className="flex flex-col md:flex-row bg-white">
+                <div className="flex flex-col md:flex-row">
 
                     {/* Main Content Section */}
-                    <main className="w-full md:w-2/3 p-8 sm:p-12 space-y-12 bg-white">
+                    <main className="w-full md:w-2/3 p-8 sm:p-12 space-y-12 print:p-4 print:space-y-4 print:w-[65%]">
 
                         {/* Research Section */}
-                        <section className="space-y-8">
-                            <div className="flex items-center gap-3 mb-6 border-b-2 border-slate-100 pb-2">
-                                <div className="bg-blue-50 p-2 rounded-lg no-reset">
-                                    <FileText className="w-6 h-6 text-blue-600" />
-                                </div>
-                                <h2 className="text-2xl font-bold tracking-tight uppercase text-slate-900">Research & Publications</h2>
+                        <section className="print:space-y-1">
+                            <div className="flex items-center gap-2 mb-6 text-slate-900 border-b-2 border-slate-100 pb-1 print:mb-1">
+                                <FileText className="w-6 h-6 text-blue-600 print:w-3.5 print:h-3.5" />
+                                <h2 className="text-2xl font-bold tracking-tight uppercase print:text-xs">Research & Publications</h2>
                             </div>
-                            <div className="space-y-10">
+                            <div className="space-y-8 print:space-y-1.5">
                                 {details.research.map((paper, idx) => (
-                                    <div key={idx} className="group">
-                                        <h3 className="text-xl font-bold text-slate-800 tracking-tight leading-tight group-hover:text-blue-600 transition-colors mb-3">{paper.title}</h3>
-                                        <div className="flex items-center gap-2 mb-4">
-                                            <span className="text-xs font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded tracking-wide uppercase no-reset">{paper.role}</span>
-                                            <span className="text-xs font-bold text-slate-500 italic tracking-tight">{paper.status}</span>
+                                    <div key={idx} className="group break-inside-avoid">
+                                        <div className="flex justify-between items-start mb-2 print:mb-0.5">
+                                            <h3 className="text-lg font-bold text-slate-800 tracking-tight leading-tight group-hover:text-blue-600 transition-colors print:text-[10px]">{paper.title}</h3>
                                         </div>
-                                        <ul className="space-y-2.5">
+                                        <div className="flex items-center gap-2 mb-3 print:mb-1">
+                                            <span className="text-xs font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded tracking-wide uppercase print:text-[8px] print:px-1.5 print:py-0.5">{paper.role}</span>
+                                            <span className="text-xs font-bold text-slate-500 italic tracking-tight print:text-[8px]">{paper.status}</span>
+                                        </div>
+                                        <ul className="space-y-1.5 print:space-y-0.5">
                                             {paper.highlights.map((highlight, hIdx) => (
-                                                <li key={hIdx} className="text-slate-600 text-[15px] flex gap-3 leading-relaxed">
-                                                    <span className="text-blue-500 font-bold mt-1 no-reset">•</span>
+                                                <li key={hIdx} className="text-slate-700 text-sm flex gap-2 print:text-[9px]">
+                                                    <span className="text-blue-500 font-bold">•</span>
                                                     {highlight}
                                                 </li>
                                             ))}
@@ -210,25 +199,23 @@ const Resume = () => {
                         </section>
 
                         {/* Key Projects Section */}
-                        <section className="space-y-8">
-                            <div className="flex items-center gap-3 mb-6 border-b-2 border-slate-100 pb-2">
-                                <div className="bg-blue-50 p-2 rounded-lg no-reset">
-                                    <Briefcase className="w-6 h-6 text-blue-600" />
-                                </div>
-                                <h2 className="text-2xl font-bold tracking-tight uppercase text-slate-900">Featured Technical Projects</h2>
+                        <section className="print:space-y-1">
+                            <div className="flex items-center gap-2 mb-6 text-slate-900 border-b-2 border-slate-100 pb-1 print:mb-1">
+                                <Briefcase className="w-6 h-6 text-blue-600 print:w-3.5 print:h-3.5" />
+                                <h2 className="text-2xl font-bold tracking-tight uppercase print:text-xs">Featured Technical Projects</h2>
                             </div>
-                            <div className="space-y-12">
+                            <div className="space-y-10 print:space-y-2">
                                 {details.projects.map((project, idx) => (
                                     <div key={idx} className="break-inside-avoid">
-                                        <div className="flex justify-between items-center mb-2">
-                                            <h3 className="text-xl font-bold text-slate-800 uppercase tracking-tight">{project.title}</h3>
-                                            <span className="text-[10px] font-bold text-slate-400 tracking-widest uppercase no-reset">{project.role}</span>
+                                        <div className="flex justify-between items-center mb-1 print:mb-0">
+                                            <h3 className="text-lg font-bold text-slate-800 uppercase tracking-tight print:text-[10px]">{project.title}</h3>
+                                            <span className="text-[10px] font-bold text-slate-400 tracking-widest uppercase print:text-[6px]">{project.role}</span>
                                         </div>
-                                        <p className="text-slate-600 text-[15px] mb-4 leading-relaxed">{project.description}</p>
-                                        <ul className="space-y-2">
+                                        <p className="text-slate-600 text-[13px] mb-3 leading-relaxed print:text-[8px] print:mb-0.5 print:leading-tight">{project.description}</p>
+                                        <ul className="space-y-1.5 print:space-y-0 text-slate-700">
                                             {project.highlights.map((highlight, hIdx) => (
-                                                <li key={hIdx} className="text-slate-600 text-[14px] flex gap-3 leading-relaxed">
-                                                    <Zap className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5 no-reset" />
+                                                <li key={hIdx} className="text-slate-700 text-xs flex gap-2 print:text-[7.5px] print:leading-tight">
+                                                    <Zap className="w-3.5 h-3.5 text-blue-400 flex-shrink-0 print:w-2 print:h-2" />
                                                     {highlight}
                                                 </li>
                                             ))}
@@ -241,29 +228,29 @@ const Resume = () => {
                     </main>
 
                     {/* Sidebar Section */}
-                    <aside className="w-full md:w-1/3 bg-slate-50 p-8 sm:p-12 border-t md:border-t-0 md:border-l border-slate-100 space-y-10">
+                    <aside className="w-full md:w-1/3 bg-slate-50 p-8 sm:p-12 border-t md:border-t-0 md:border-l border-slate-100 space-y-10 print:border-l-0 print:p-3 print:space-y-3 print:bg-slate-50 print:w-[35%]">
 
                         {/* Technical Skills */}
-                        <section className="space-y-6">
-                            <div className="flex items-center gap-2 mb-6">
-                                <Code2 className="w-6 h-6 text-blue-600 no-reset" />
-                                <h2 className="text-xl font-bold tracking-tight uppercase text-slate-900">Tech Stack</h2>
+                        <section className="print:space-y-1">
+                            <div className="flex items-center gap-2 mb-6 text-slate-900 print:mb-1">
+                                <Code2 className="w-6 h-6 text-blue-600 print:w-3.5 print:h-3.5" />
+                                <h2 className="text-xl font-bold tracking-tight uppercase print:text-xs">Tech Stack</h2>
                             </div>
-                            <div className="space-y-8">
+                            <div className="space-y-6 print:space-y-1">
                                 <div>
-                                    <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4 no-reset">Cloud & DevOps</h3>
-                                    <div className="flex flex-wrap gap-2">
+                                    <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 whitespace-nowrap print:mb-1 print:text-[8px]">Cloud & DevOps</h3>
+                                    <div className="flex flex-wrap gap-1.5 print:gap-1">
                                         {details.skills.devops_cloud.map(skill => (
-                                            <span key={skill} className="px-2.5 py-1 bg-white border border-slate-200 text-[11px] font-bold text-slate-700 rounded shadow-sm hover:border-blue-200 transition-colors no-reset">{skill}</span>
+                                            <span key={skill} className="px-2 py-1 bg-white border border-slate-200 text-[11px] font-bold text-slate-700 rounded shadow-sm print:text-[8px] print:px-1 print:py-0">{skill}</span>
                                         ))}
                                     </div>
                                 </div>
                                 {Object.entries(details.skills).filter(([cat]) => cat !== 'devops_cloud').map(([category, skills]) => (
                                     <div key={category} className="break-inside-avoid">
-                                        <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4 uppercase no-reset">{category.replace('_', ' ')}</h3>
-                                        <div className="flex flex-wrap gap-2">
+                                        <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 uppercase print:mb-1 print:text-[8px]">{category.replace('_', ' ')}</h3>
+                                        <div className="flex flex-wrap gap-1.5 print:gap-1">
                                             {skills.map(skill => (
-                                                <span key={skill} className="px-2.5 py-1 bg-white border border-slate-200 text-[11px] font-bold text-slate-700 rounded shadow-sm hover:border-blue-200 transition-colors no-reset">{skill}</span>
+                                                <span key={skill} className="px-2 py-1 bg-white border border-slate-200 text-[11px] font-bold text-slate-700 rounded shadow-sm print:text-[8px] print:px-1 print:py-0">{skill}</span>
                                             ))}
                                         </div>
                                     </div>
@@ -272,19 +259,19 @@ const Resume = () => {
                         </section>
 
                         {/* Education */}
-                        <section className="space-y-6">
-                            <div className="flex items-center gap-2 mb-6 border-t border-slate-200 pt-8">
-                                <BookOpen className="w-6 h-6 text-blue-600 no-reset" />
-                                <h2 className="text-xl font-bold tracking-tight uppercase text-slate-900">Education</h2>
+                        <section>
+                            <div className="flex items-center gap-2 mb-6 text-slate-900 border-t border-slate-100 pt-6 print:pt-2 print:mb-2">
+                                <BookOpen className="w-6 h-6 text-blue-600 print:w-4 print:h-4 text-blue-600" />
+                                <h2 className="text-xl font-bold tracking-tight uppercase print:text-sm">Education</h2>
                             </div>
-                            <div className="space-y-8">
+                            <div className="space-y-8 print:space-y-1">
                                 {details.education.map((edu, idx) => (
-                                    <div key={idx} className="relative pl-4 border-l-2 border-blue-100">
-                                        <h3 className="text-[14px] font-bold text-slate-800 leading-tight mb-1">{edu.institution}</h3>
-                                        <p className="text-[11px] text-blue-600 font-bold uppercase tracking-tight mb-2 no-reset">{edu.degree}</p>
-                                        <div className="flex justify-between text-[10px] font-bold text-slate-400">
+                                    <div key={idx} className="relative pl-4 border-l-2 border-blue-100 break-inside-avoid">
+                                        <h3 className="text-[13px] font-bold text-slate-800 leading-tight mb-1 print:text-[10px] print:mb-0">{edu.institution}</h3>
+                                        <p className="text-[11px] text-blue-600 font-bold uppercase tracking-tight mb-1 print:text-[8px] print:mb-0">{edu.degree}</p>
+                                        <div className="flex justify-between text-[10px] font-bold text-slate-400 print:text-[8px]">
                                             <span>{edu.year}</span>
-                                            <span className="text-slate-700 no-reset">{edu.score}</span>
+                                            <span className="text-slate-700">{edu.score}</span>
                                         </div>
                                     </div>
                                 ))}
@@ -292,15 +279,15 @@ const Resume = () => {
                         </section>
 
                         {/* Achievements */}
-                        <section className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                            <div className="flex items-center gap-2 mb-5">
-                                <Award className="w-5 h-5 text-blue-600 no-reset" />
-                                <h2 className="text-sm font-bold uppercase tracking-tight text-slate-900">Achievements</h2>
+                        <section className="bg-white p-6 rounded-xl border border-slate-100 print:p-2 print:rounded-lg">
+                            <div className="flex items-center gap-2 mb-4 text-slate-900 print:mb-1">
+                                <Award className="w-5 h-5 text-blue-600 print:w-3.5 print:h-3.5 text-blue-600" />
+                                <h2 className="text-md font-bold uppercase tracking-tight print:text-[10px]">Achievements</h2>
                             </div>
-                            <ul className="space-y-4">
+                            <ul className="space-y-4 print:space-y-1">
                                 {details.achievements.map((achievement, idx) => (
-                                    <li key={idx} className="text-[11px] text-slate-600 font-medium leading-relaxed flex gap-2">
-                                        <span className="text-blue-400 font-bold font-mono no-reset">/</span>
+                                    <li key={idx} className="text-[11px] text-slate-600 font-medium leading-normal flex gap-2 print:text-[8px]">
+                                        <span className="text-blue-400 font-bold font-mono">/</span>
                                         {achievement}
                                     </li>
                                 ))}
@@ -310,11 +297,10 @@ const Resume = () => {
                     </aside>
                 </div>
 
-                <div className="h-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 w-full"></div>
+                <div className="h-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 w-full print:hidden"></div>
             </div>
 
-            {/* Background glow */}
-            <div className="fixed -bottom-24 -left-24 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="fixed -bottom-24 -left-24 w-96 h-96 bg-blue-100 opacity-30 rounded-full blur-3xl pointer-events-none"></div>
         </div>
     );
 };
