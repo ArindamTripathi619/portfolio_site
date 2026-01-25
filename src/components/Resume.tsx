@@ -111,23 +111,23 @@ const Resume = () => {
     };
 
     return (
-        <div className="min-h-screen bg-slate-50 py-10 px-4 sm:px-6 lg:px-8 font-inter print:bg-white print:py-0 print:px-0 scroll-smooth">
+        <div className="min-h-screen w-full bg-ink-black py-10 px-4 sm:px-6 lg:px-8 font-inter print:bg-white print:py-0 print:px-0 scroll-smooth relative flex flex-col items-center">
             <Link
                 href="/"
-                className="fixed top-8 left-8 z-50 bg-white/80 backdrop-blur-sm text-slate-900 p-3 rounded-full shadow-lg hover:bg-slate-900 hover:text-white transition-all active:scale-95 group print:hidden flex items-center gap-2"
+                className="fixed top-8 right-8 z-50 bg-accent text-ink-black p-3 px-6 rounded-full shadow-2xl hover:scale-105 transition-all active:scale-95 group print:hidden flex items-center gap-2 font-bold text-xs uppercase tracking-widest"
             >
-                <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-                <span className="font-bold text-sm pr-2">Back to Portfolio</span>
+                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                <span>Exit Resume</span>
             </Link>
 
-            <div className="max-w-4xl mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden print:shadow-none print:rounded-none">
+            <div className="w-full max-w-4xl bg-white shadow-2xl rounded-2xl overflow-hidden print:shadow-none print:rounded-none resume-reset">
 
                 {/* Header Section */}
                 <header className="bg-slate-900 text-white p-8 sm:p-12 relative overflow-hidden print:p-4 print:pb-2">
                     <div className="relative z-10 flex flex-col md:flex-row items-center sm:items-start md:items-center justify-between gap-8 print:gap-2">
                         <div className="text-center sm:text-left">
-                            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-2 uppercase print:text-2xl print:mb-0.5 text-white">{details.name}</h1>
-                            <p className="text-slate-400 text-xl font-medium tracking-wide mb-6 print:text-xs print:mb-2 italic">Software Engineer & Systems Researcher</p>
+                            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-2 uppercase print:text-2xl print:mb-0.5 text-white no-reset">{details.name}</h1>
+                            <p className="text-slate-400 text-xl font-medium tracking-wide mb-6 print:text-xs print:mb-2 italic no-reset">Software Engineer & Systems Researcher</p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm max-w-2xl print:text-[9px] print:gap-1 print:grid-cols-2">
                                 <div className="flex items-center gap-2 justify-center sm:justify-start">
@@ -242,24 +242,24 @@ const Resume = () => {
                         {/* Technical Skills */}
                         <section className="print:space-y-1">
                             <div className="flex items-center gap-2 mb-6 text-slate-900 print:mb-1">
-                                <Code2 className="w-6 h-6 text-blue-600 print:w-3.5 print:h-3.5" />
+                                <Code2 className="w-6 h-6 text-blue-600 print:w-3.5 print:h-3.5 no-reset" />
                                 <h2 className="text-xl font-bold tracking-tight uppercase print:text-xs">Tech Stack</h2>
                             </div>
                             <div className="space-y-6 print:space-y-1 text-slate-900 leading-normal">
                                 <div>
-                                    <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 whitespace-nowrap print:mb-0.5 print:text-[7px]">Cloud & DevOps</h3>
+                                    <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 whitespace-nowrap print:mb-0.5 print:text-[7px] no-reset">Cloud & DevOps</h3>
                                     <div className="flex flex-wrap gap-1.5 print:gap-0.5">
                                         {details.skills.devops_cloud.map(skill => (
-                                            <span key={skill} className="px-2 py-1 bg-white border border-slate-200 text-[11px] font-bold text-slate-700 rounded shadow-sm print:text-[7.5px] print:px-1 print:py-0 print:leading-tight">{skill}</span>
+                                            <span key={skill} className="px-2 py-1 bg-white border border-slate-200 text-[11px] font-bold text-slate-700 rounded shadow-sm print:text-[7.5px] print:px-1 print:py-0 print:leading-tight no-reset">{skill}</span>
                                         ))}
                                     </div>
                                 </div>
                                 {Object.entries(details.skills).filter(([cat]) => cat !== 'devops_cloud').map(([category, skills]) => (
                                     <div key={category} className="break-inside-avoid">
-                                        <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 uppercase print:mb-0.5 print:text-[7px]">{category.replace('_', ' ')}</h3>
+                                        <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 uppercase print:mb-0.5 print:text-[7px] no-reset">{category.replace('_', ' ')}</h3>
                                         <div className="flex flex-wrap gap-1.5 print:gap-0.5">
                                             {skills.map(skill => (
-                                                <span key={skill} className="px-2 py-1 bg-white border border-slate-200 text-[11px] font-bold text-slate-700 rounded shadow-sm print:text-[7.5px] print:px-1 print:py-0 print:leading-tight">{skill}</span>
+                                                <span key={skill} className="px-2 py-1 bg-white border border-slate-200 text-[11px] font-bold text-slate-700 rounded shadow-sm print:text-[7.5px] print:px-1 print:py-0 print:leading-tight no-reset">{skill}</span>
                                             ))}
                                         </div>
                                     </div>

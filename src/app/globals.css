@@ -97,3 +97,29 @@ p {
   font-size: var(--text-small);
   line-height: var(--text-small--line-height);
 }
+
+/* Resume Reset - Ensures document feel on dark-mode site */
+.resume-reset {
+  color: #1e293b !important; /* slate-800 */
+}
+
+.resume-reset h1, 
+.resume-reset h2, 
+.resume-reset h3, 
+.resume-reset h4 {
+  color: #0f172a !important; /* slate-900 */
+  font-weight: 700 !important;
+}
+
+.resume-reset h1 { color: #ffffff !important; } /* Keep main header white */
+
+.resume-reset p, 
+.resume-reset li, 
+.resume-reset span:not(.no-reset) {
+  color: #334155 !important; /* slate-700 */
+  font-weight: 400 !important;
+}
+
+.resume-reset a {
+  color: inherit !important;
+}
