@@ -100,26 +100,35 @@ p {
 
 /* Resume Reset - Ensures document feel on dark-mode site */
 .resume-reset {
+  background-color: white !important;
   color: #1e293b !important; /* slate-800 */
+  font-family: var(--font-inter), sans-serif !important;
 }
 
+/* Force standard weights and prevent global theme font-sizes */
 .resume-reset h1, 
 .resume-reset h2, 
 .resume-reset h3, 
 .resume-reset h4 {
-  color: #0f172a !important; /* slate-900 */
+  font-size: unset !important;
   font-weight: 700 !important;
+  letter-spacing: normal !important;
+  line-height: normal !important;
+  color: #0f172a !important; /* slate-900 */
 }
 
-.resume-reset h1 { color: #ffffff !important; } /* Keep main header white */
+.resume-reset h1 { color: #ffffff !important; }
 
 .resume-reset p, 
 .resume-reset li, 
 .resume-reset span:not(.no-reset) {
-  color: #334155 !important; /* slate-700 */
+  font-size: unset !important;
   font-weight: 400 !important;
+  line-height: 1.5 !important;
+  color: #334155 !important; /* slate-700 */
 }
 
 .resume-reset a {
   color: inherit !important;
+  text-decoration: none;
 }
